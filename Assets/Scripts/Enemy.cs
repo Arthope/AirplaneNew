@@ -8,7 +8,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] Rigidbody Rigidbody;
     [SerializeField] float ConstantForceValue;
 
-    void FixedUpdate()
+    public void FixedUpdate()
     {
         Rigidbody.AddForce(transform.forward * ConstantForceValue, ForceMode.VelocityChange);
     }

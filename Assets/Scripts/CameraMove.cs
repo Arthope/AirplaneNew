@@ -6,11 +6,11 @@ public class CameraMove : MonoBehaviour
 {
     [SerializeField] private Transform _target;
    
-    void Update()
+    public  void Update()
     {
         if (_target)
         {
-        transform.position = _target.position;
+             transform.position = _target.position;
         }
     }
 }

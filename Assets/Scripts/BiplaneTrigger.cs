@@ -7,7 +7,7 @@ public class BiplaneTrigger : MonoBehaviour
     [SerializeField] private int _health;
     [SerializeField] private Score _score;
 
-   private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         Enemy enemy = other.gameObject.GetComponent<Enemy>();
         if (enemy)

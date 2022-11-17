@@ -8,9 +8,10 @@ public class Gun : MonoBehaviour
     [SerializeField] private float _bulletSpeed;
     [SerializeField] private AudioSource _shotSound;
     [SerializeField] private float _shotPeriod;
+
     private float _timer;
    
-    void Update()
+    public void Update()
     {
         _timer += Time.deltaTime;
 

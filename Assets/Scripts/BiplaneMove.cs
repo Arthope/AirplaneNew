@@ -4,18 +4,18 @@ using UnityEngine;
 
 public class BiplaneMove : MonoBehaviour
 {
-    [SerializeField] Rigidbody Rigidbody;
+    [SerializeField] private Rigidbody Rigidbody;
     [SerializeField] private float _forceValue;
     [SerializeField] private float TorqueValue;
     [SerializeField] private float ConstantForceValue;
 
-    void FixedUpdate()
+    public void FixedUpdate()
     {      
         Rigidbody.AddForce(transform.forward * ConstantForceValue, ForceMode.VelocityChange);
 
         if (Input.GetKey(KeyCode.UpArrow))
         {
-        Rigidbody.AddForce(transform.forward * _forceValue, ForceMode.VelocityChange);
+            Rigidbody.AddForce(transform.forward * _forceValue, ForceMode.VelocityChange);
         }
 
         float horizontalImput = Input.GetAxis("Horizontal");

@@ -6,14 +6,19 @@ public class Creator : MonoBehaviour
 {
     [SerializeField] private GameObject _coinPrefab;
 
-    void Start()
+    private int _lengthLevel = 100;
+    private int _minimalWidthLevel = -15;
+    private int _maximalWidthLevel = 15;
+    private int _depthLevel = 6;
+
+    public void Start()
     {
-        for (int i = 0; i < 100; i++)
+        for (int i = 0; i < _lengthLevel; i++)
         {
             if(Random.Range(0,3) == 0)
             {
-            Vector3 position = new Vector3(i, Random.Range(-15,15), 6);
-            Instantiate(_coinPrefab, position, Quaternion.identity);
+                Vector3 position = new Vector3(i, Random.Range(_minimalWidthLevel, _maximalWidthLevel), _depthLevel);
+                Instantiate(_coinPrefab, position, Quaternion.identity);
             }
         }
     }
