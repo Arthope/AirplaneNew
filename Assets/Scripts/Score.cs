@@ -13,5 +13,4 @@ public class Score : MonoBehaviour
         _coins += 1;
         Text.text = _coins.ToString();
     }
-    
 }
