@@ -2,15 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CameraMove : MonoBehaviour
+public class Camera : MonoBehaviour
 {
     [SerializeField] private Transform _target;
    
-    void Update()
+    private void Update()
     {
         if (_target)
         {
-        transform.position = _target.position;
+            transform.position = _target.position;
         }
     }
 }
