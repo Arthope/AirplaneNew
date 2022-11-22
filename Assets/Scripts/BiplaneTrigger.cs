@@ -12,7 +12,7 @@ public class BiplaneTrigger : MonoBehaviour
         Enemy enemy = other.gameObject.GetComponent<Enemy>();
         if (enemy)
         {
-            _health -= 1;
+            _health -= enemy.Damage;
             if (_health <= 0)
             {
                 Destroy(gameObject);

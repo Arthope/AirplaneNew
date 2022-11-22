@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Gun : MonoBehaviour
 {
-    [SerializeField] private GameObject _bulletPrefab;
+    [SerializeField] private GameObject _bullet;
     [SerializeField] private float _bulletSpeed;
     [SerializeField] private AudioSource _shotSound;
     [SerializeField] private float _shotPeriod;
@@ -27,7 +27,7 @@ public class Gun : MonoBehaviour
 
     private void CreateBullet()
     {
-        GameObject newBullet = Instantiate(_bulletPrefab, transform.position, transform.rotation);
+        GameObject newBullet = Instantiate(_bullet, transform.position, transform.rotation);
         newBullet.GetComponent<Rigidbody>().velocity = transform.forward * _bulletSpeed;
         _shotSound.Play();
     }

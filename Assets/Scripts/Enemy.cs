@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    [SerializeField] public int Damage = 1;
     [SerializeField] private GameObject _effectPrefab;
-    [SerializeField] Rigidbody Rigidbody;
-    [SerializeField] float ConstantForceValue;
+    [SerializeField] private Rigidbody Rigidbody;
+    [SerializeField] private float ConstantForceValue;
 
     private void FixedUpdate()
     {

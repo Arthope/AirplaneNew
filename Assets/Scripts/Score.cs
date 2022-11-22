@@ -5,12 +5,13 @@ using TMPro;
 
 public class Score : MonoBehaviour
 {
-   [SerializeField] private int _coins;
    [SerializeField] public TextMeshProUGUI Text;
+   [SerializeField] private int _coins;
+   [SerializeField] private int _coinValue;
 
-    public void AddOne()
+    public void AddCoin()
     {
-        _coins += 1;
+        _coins += _coinValue;
         Text.text = _coins.ToString();
     }
 }
